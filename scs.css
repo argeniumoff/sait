@@ -1,3 +1,4 @@
+
 body {
     max-width: 1920px;
     max-height:1080px;
@@ -14,95 +15,121 @@ body {
 
 .menu-list {
     display: flex;
+    flex-direction: column; /* Вертикальное меню на мобильных */
+    align-items: center; /* Центрирование пунктов меню */
     list-style-type: none;
-    text-align: center;
-    font-family: 'Montserrat', sans-serif;
-
+    padding: 0; /* Убираем дефолтные отступы */
 }
 
 .menu-item:not(:last-child) {
-    margin-right: 63px;
-    text-align: center;
+    margin-bottom: 10px; /* Добавляем отступы между пунктами меню */
 }
 
 .menu-item a {
     text-decoration: none;
     color: white;
-    text-align: center;
 }
 
-.main-za {
-    margin: 0px 100px 60px 600px;
-    font-size: 35px;
+/* Простые блоки с текстами и изображениями */
+.main-za,
+.main-text,
+.main-img,
+.quote,
+.main2-za,
+.main2-text,
+.main2-img,
+.main3-za,
+.main3-text,
+.main4-za,
+.main4-text {
+    margin: 20px; /* Универсальный отступ для всех элементов */
+    font-size: 18px; /* Меньший размер шрифта для мобильных устройств */
+    text-align: center; /* Центрирование текста */
+    width: auto; /* Автоматическая ширина для растяжения на весь блок */
 }
 
-.main-text {
-    margin: 10px 1000px 80px 100px;
-    font-weight: 300;
-    font-size: 23px;
-    line-height: 32px;
-}
-
+/* Изображения делаем резиновыми */
 .main-img {
-    border: 3px solid #fff;
-    margin: -360px 100px 80px 1050px;
-}
-
-.quote {
-    font-weight: 400;
-    font-size: 18px;
-    line-height: 21px;
-    margin-left: 0;
-    opacity: 0.7;
-}
-
-.main2-za {
-    margin: 0px 100px 60px 680px;
-    font-size: 35px;
-}
-
-.main2-text {
-    margin: 10px 100px 80px 1000px;
-    font-weight: 300;
-    font-size: 23px;
-    line-height: 32px;   
+    max-width: 100%;
+    height: auto;
+    border: 2px solid #fff;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .main2-img {
-    border: 3px solid #fff;
-    margin: -460px 100px 80px 150px;
+    max-width: 100%;
+    height: auto;
+    border: 2px solid #fff;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 30%;
 }
 
-.main3-za {
-    margin: 0px 100px 30px 500px;
-    font-size: 35px;
+/* Кнопка */
+.glow-on-hover {
+    width: 220px;
+    height: 50px;
+    border-radius: 10px;
+    display: block;
+    margin: 20px auto; /* Центрирование кнопки */
 }
 
-.main3-text {
-    margin: 10px 100px 80px 100px;
-    font-weight: 300;
-    font-size: 23px;
-    line-height: 32px;
+/* Общие стили */
+.info,
+.button-info {
     text-align: center;
+    margin: 20px;
 }
 
-.main4-za {
-    text-align: center;
-    margin: 0px 00px 30px 00px;
-    font-size: 35px;
+/* Медиа-запросы */
+@media (max-width: 768px) {
+    .menu-list {
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    
+    .menu-item:not(:last-child) {
+        margin-right: 10px; /* Горизонтальные отступы для горизонтального меню */
+        margin-bottom: 0;
+    }
+
+    /* Отступы для блоков и текста */
+    .main-za,
+    .main-text,
+    .quote,
+    .main2-za,
+    .main2-text,
+    .main3-za,
+    .main3-text,
+    .main4-za,
+    .main4-text {
+        margin: 10px;
+        font-size: 16px; /* Еще меньше размер шрифта для планшетов и небольших экранов */
+    }
 }
 
-.main4-text {
-    margin: 10px 100px 80px 100px;
-    font-weight: 300;
-    font-size: 23px;
-    line-height: 32px;
-    text-align: center;
-}
+@media (max-width: 480px) {
+    /* Установка флекс-направления и отмена флекса для мобильны версии */
+    .menu-list {
+        flex-direction: column;
+    }
 
-.info {
-    text-align: center;
-    margin: 180px 0px 0px 0px;
+    /* Стилизация блоков под мобильные устройства */
+    .main-za,
+    .main-text,
+    .quote,
+    .main2-za,
+    .main2-text,
+    .main3-za,
+    .main3-text,
+    .main4-za,
+    .main4-text {
+        font-size: 14px; /* Предельно маленький размер шрифта для мобильных устройств */
+    }
 }
 
 .glow-on-hover {
@@ -173,3 +200,4 @@ body {
     font-family: 'Montserrat', sans-serif;
     width: 900px;
 }
+
