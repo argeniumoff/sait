@@ -14,15 +14,16 @@ body {
 }
 
 .menu-list {
-    display: flex;
     flex-direction: column; /* Вертикальное меню на мобильных */
-    align-items: center; /* Центрирование пунктов меню */
-    list-style-type: none;
+    text-align: center; /* Центрирование пунктов меню */
+    list-style: none;
     padding: 0; /* Убираем дефолтные отступы */
+    font-size: 30px;
 }
 
 .menu-item:not(:last-child) {
     margin-bottom: 10px; /* Добавляем отступы между пунктами меню */
+    text-align: center;
 }
 
 .menu-item a {
